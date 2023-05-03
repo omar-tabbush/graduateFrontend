@@ -4,6 +4,7 @@ import { AiFillInfoCircle } from "react-icons/ai";
 import { AbilityContext, updateAbility } from "../can";
 import { useContext } from "react";
 import axios from "../api/axios";
+import { useDispatch } from "react-redux";
 
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
@@ -12,6 +13,7 @@ const REGISTER_URL = "/auth/register";
 
 export const Register = () => {
   const ability = useContext(AbilityContext);
+  const dispatch = useDispatch();
 
 
   const userRef = useRef(null);
