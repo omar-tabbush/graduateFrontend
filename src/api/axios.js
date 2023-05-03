@@ -1,14 +1,14 @@
 import axios from "axios";
 
 export default axios.create({
-  baseURL: "http://localhost:5001",
+  baseURL: import.meta.env.VITE_API_URL,
   headers: {
     "Content-Type": "application/json",
   },
 });
 
 export const privateAxios = axios.create({
-  baseURL: "http://localhost:5001",
+  baseURL: import.meta.env.VITE_API_URL,
   headers: {
     "Content-Type": "application/json",
     authorization: `Bearer ${localStorage.getItem("token") || ""}`,
