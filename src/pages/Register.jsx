@@ -3,6 +3,8 @@ import { Link } from "react-router-dom";
 import { AiFillInfoCircle } from "react-icons/ai";
 import { AbilityContext, updateAbility } from "../can";
 import { useContext } from "react";
+import axios from "../api/axios";
+
 const USER_REGEX = /^[A-z][A-z0-9-_]{3,23}$/;
 const PWD_REGEX = /^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[!@#$%]).{8,24}$/;
 const NAME_REGEX = /^[A-z]{3,24}$/;
