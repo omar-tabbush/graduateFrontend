@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./App.css";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Route, Routes } from "react-router-dom";
 import Fixed from "./components/Fixed";
 // import { Landing, AllDesigns, Error404 } from "./pages";
 import { Landing } from "./pages/Landing";
@@ -19,7 +19,7 @@ import { DashCards } from "./components/Cards/dashboardCard";
 import { Designs } from "./pages/dashboard/AllDesignsAdmin";
 function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="" element={<Fixed />}>
           <Route path={"home"} element={<Landing />} />
@@ -46,7 +46,7 @@ function App() {
           <Route path="*" element={<Error404 />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
